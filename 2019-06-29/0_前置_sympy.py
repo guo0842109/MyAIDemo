@@ -25,12 +25,21 @@ import sympy as sym
 # plt.plot(x,y,color = '#bbbbbb',lw=2,alpha = 1)
 # plt.show()
 
-from pyecharts import Geo
+# # 求导
+# x = sym.symbols('x')
+# y = sym.exp(x)*(sym.cos(x))/2 + sym.exp(x)*(sym.sin(x))/2
+# print(y.diff(x))
+# # 求积分
+# z = sym.exp(x)*sym.cos(x)
+# print(z.integrate(x))
+# # 求导
+# print(z.doit())
+# # 判断相等
+# print(sym.Eq(z, z.doit()))
 
-data = [("海门", 9), ("鄂尔多斯", 12), ("招远", 12), ("舟山", 12), ("齐齐哈尔", 14), ("盐城", 15)]
-geo = Geo("全国主要城市空气质量", "data from pm2.5", title_color="#fff", title_pos="center",
-          width=1200, height=600, background_color='#404a59')
-attr, value = geo.cast(data)
-geo.add("", attr, value, type="effectScatter", is_random=True, effect_scale=5)
-geo.render("echarts/geo.html")
-geo
+# x,y = sym.symbols('x y')
+# z =x**2+2*x+y**2+4*y+4
+# dzx = z.diff(x)
+# dzy = z.diff(y)
+# sym.plotting.plot3d(z,(x,-10,10),(y,-10,10))
+# sym.plotting.plot3d(sym.sqrt(dzx**2 +  dzy**2), (x, -10, 10), (y, -10, 10))
