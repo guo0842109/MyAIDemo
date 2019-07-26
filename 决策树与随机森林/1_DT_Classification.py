@@ -9,9 +9,12 @@ from sklearn import tree
 
 
 # x = [[1,2,3,0],[4,5,6,0],[7,8,9,0]]
-x = [[1,1,1]]
+# 数组矩阵的形式
+x = np.array([[1,1,1]])
 print("x=======")
 print(x)
+print(type(x))
+print(np.shape(x))
 # y = [1,2,3]
 y = [2]
 print("y=======")
